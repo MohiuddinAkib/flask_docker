@@ -1,8 +1,12 @@
 FROM python:3.6.8
 
+LABEL author="md akib"
+
 ARG FLASK_RUN_PORT
 
-LABEL author="md akib"
+ARG FLASK_RUN_HOST
+
+ENV FLASK_RUN_HOST=${FLASK_RUN_HOST}
 
 WORKDIR /usr/src/app
 
